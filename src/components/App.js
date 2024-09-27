@@ -5,10 +5,11 @@ import WeatherDisplay from "./WeatherDisplay";
 
 const App = () => {
   const[weatherData,setWeatherData]=useState({ temperature: 0, conditions: '' });
-  useEffect(()=>{
-    const weather={ temperature: 25, conditions: 'Sunny' };
-    setWeatherData(weather)
-  },[])
+  useEffect(() => {
+    setTimeout(() => {
+      setWeatherData({ temperature: 25, conditions: "Sunny" })
+    }, 1000)
+  })
   return (
     <div>
         <h1>Weather App</h1>
